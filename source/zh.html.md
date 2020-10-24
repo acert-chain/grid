@@ -1552,6 +1552,180 @@ API路径：POST `/api/v1/contractTransactions`
 ```
 
 
+## 根据交易hash获取事件
+
+### HTTP Request
+
+API路径：POST `/api/v1/getEventByHash`
+
+> 示例:
+
+```json
+
+{
+    "txHash":"0xd7e108835d9aefcc7e04cbc0048c0299685e8e9543e8624e040f5b851aa23801",
+    "abi":"[{\"constant\":false,\"inputs\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"weight\",\"type\":\"uint256\"}],\"name\":\"hasIndex\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"name\",\"type\":\"string\"},{\"indexed\":true,\"name\":\"flag\",\"type\":\"bool\"},{\"indexed\":true,\"name\":\"weight\",\"type\":\"uint256\"}],\"name\":\"HasIndex\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"name\",\"type\":\"string\"},{\"indexed\":true,\"name\":\"flag\",\"type\":\"bool\"},{\"indexed\":false,\"name\":\"weight\",\"type\":\"uint256\"}],\"name\":\"TwoEvent\",\"type\":\"event\"}]"
+}
+```
+
+### 请求参数
+| 字段名称 | 是否必须 | 描述 |
+| --- | ------|-------------|
+| txHash | 是 | 交易hash | 
+| abi | 是 | 合约abi | 
+
+
+> 返回:
+
+```json
+{
+    "data": [
+        {
+            "txHash": "0xd7e108835d9aefcc7e04cbc0048c0299685e8e9543e8624e040f5b851aa23801",
+            "result": {
+                "flag": true,
+                "name": "0x32546a16566d300ff0ee51ca4dc99d92a9a1cc65a1badb8b6aacaa62b4cd71e1",
+                "weight": 300
+            },
+            "resultType": {
+                "flag": "bool",
+                "name": "string",
+                "weight": "uint256"
+            },
+            "blockTime": 1602732885,
+            "height": 109524,
+            "eventName": "HasIndex",
+            "contract": "test8@demo",
+            "eventIndex": 0,
+            "confirmed": true
+        },
+        {
+            "txHash": "0xd7e108835d9aefcc7e04cbc0048c0299685e8e9543e8624e040f5b851aa23801",
+            "result": {
+                "flag": false,
+                "name": "lisi",
+                "weight": 123
+            },
+            "resultType": {
+                "flag": "bool",
+                "name": "string",
+                "weight": "uint256"
+            },
+            "blockTime": 1602732885,
+            "height": 109524,
+            "eventName": "TwoEvent",
+            "contract": "test8@demo",
+            "eventIndex": 1,
+            "confirmed": true
+        }
+    ],
+    "errorCode": 0,
+    "errorMsg": ""
+}
+```
+
+
+## 根据交易hash获取事件
+
+### HTTP Request
+
+API路径：POST `/api/v1/contractEvents`
+
+> 示例:
+
+```json
+
+{
+    "abi":"[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"groupList\",\"outputs\":[{\"name\":\"groupId\",\"type\":\"uint256\"},{\"name\":\"groupOwner\",\"type\":\"address\"},{\"name\":\"groupName\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_groupName\",\"type\":\"string\"},{\"name\":\"_groupOwner\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"addGroup\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_groupName\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"updateGroupName\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_targetId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"jiagong\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"chuku\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_actionName\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"addAction\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_id\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"yunshu\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_groupOwner\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"updateGroupOwner\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_id\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"chulan\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"addUserToGroup\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"user\",\"type\":\"string\"}],\"name\":\"setVerifyUser\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_actionName\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"modifyAction\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_packageId\",\"type\":\"string\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"unpack\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_targetId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"breake\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"xiaoshou\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"}],\"name\":\"queryActionForUser\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"delUserFromGroup\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_id\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"siyang\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_packageId\",\"type\":\"string\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"pack\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"zhijian\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"removeActionForUser\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"ruchang\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"},{\"name\":\"_groupId\",\"type\":\"uint256\"}],\"name\":\"queryGroupForUser\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"create\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_id\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"cangchu\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"addActionForUser\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"verify\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_groupName\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_groupOwner\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"AddGroup\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_groupOwner\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"UpdateGroupOwner\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_groupName\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"UpdateGroupName\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_actionId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_name\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"AddAction\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_actionId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_name\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"UpdateAction\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_user\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"AddUserToGroup\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_user\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"DelUserFromGroup\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_user\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_actionId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"AddActionForUser\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_user\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_actionId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"RemoveActionForUser\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_productId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_action\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_remark\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"Create\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_productId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_action\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_remark\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"Tag\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_packageId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_productId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_remark\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"Pack\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_packageId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_productId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_remark\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"UnPack\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_productId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_targetId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_remark\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"Break\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_productId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_remark\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"Verify\",\"type\":\"event\"}]",
+    "topic":"UnPack(string,string,string,string,uint256,string)",
+    "contractName":"suyuan13@demo",
+    "onlyConfirmed":false,
+    "limit":40,
+    "fingerPrint":"",
+    "orderBy":"height#asc"
+}
+```
+
+### 请求参数
+| 字段名称 | 是否必须 | 描述 |
+| --- | ------|-------------|
+| abi | 是 | 合约abi | 
+| topic | 是 | 事件主题(含参数类型) | 
+| contractName | 是 | 合约名称 | 
+| onlyConfirmed | 否 | 是否已确认，默认false | 
+| limit | 否  |  查询数量，1~40,默认20 | 
+| fingerPrint | 否  |  查询下一批数据的指纹，首次传空 | 
+| orderBy | 是 | height#asc,height#desc | 
+
+
+> 返回:
+
+```json
+{
+    "data": {
+        "meta": {
+            "limit": 2,
+            "nextFingerPrint": "Gjc2sAOwnNkDRVvHKl6iPA"
+        },
+        "content": [
+            {
+                "txHash": "0x60ff4e651d9c8f8f90d6d14a2a7805e5ad72d3d170d7b0809ee3c44b83cad654",
+                "result": {
+                    "_deviceId": 400,
+                    "_packageId": "B001",
+                    "_process": "销售",
+                    "_productId": "R001,R002,R003,R004,R005,R006",
+                    "_remark": "{\"groupName\":\"销售1\",\"deviceName\":\"赵六的ipad\",\"actionName\":\"拆包\"}",
+                    "_time": "1603267417"
+                },
+                "resultType": {
+                    "_deviceId": "uint256",
+                    "_packageId": "string",
+                    "_process": "string",
+                    "_productId": "string",
+                    "_remark": "string",
+                    "_time": "string"
+                },
+                "blockTime": 1603267419,
+                "height": 287702,
+                "eventName": "UnPack",
+                "contract": "suyuan13@demo",
+                "eventIndex": 0,
+                "confirmed": true
+            },
+            {
+                "txHash": "0x13c261e7f12df00bc9517dbb5fbc1ce4e963fce5d488b88d8917032a0fd52d94",
+                "result": {
+                    "_deviceId": 400,
+                    "_packageId": "B002",
+                    "_process": "销售",
+                    "_productId": "R003001,R003002,R003003",
+                    "_remark": "{\"groupName\":\"销售1\",\"deviceName\":\"赵六的ipad\",\"actionName\":\"拆包\"}",
+                    "_time": "1603279845"
+                },
+                "resultType": {
+                    "_deviceId": "uint256",
+                    "_packageId": "string",
+                    "_process": "string",
+                    "_productId": "string",
+                    "_remark": "string",
+                    "_time": "string"
+                },
+                "blockTime": 1603279848,
+                "height": 291845,
+                "eventName": "UnPack",
+                "contract": "suyuan13@demo",
+                "eventIndex": 0,
+                "confirmed": true
+            }
+        ]
+    },
+    "errorCode": 0,
+    "errorMsg": ""
+}
+```
+
+
 
 
 # 工具

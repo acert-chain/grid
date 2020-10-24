@@ -52,7 +52,7 @@ Abnormal return:
 
 ### HTTP Request
 
-API path：GET `/api/v1/getAccount`
+API Path：GET `/api/v1/getAccount`
 
 > Example:
 
@@ -68,7 +68,7 @@ API path：GET `/api/v1/getAccount`
 | name | Y | account name |
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -135,7 +135,7 @@ API path：GET `/api/v1/getAccount`
 
 ### HTTP Request
 
-API path：GET `/api/v1/getNonce`
+API Path：GET `/api/v1/getNonce`
 
 > Example:
 
@@ -151,7 +151,7 @@ API path：GET `/api/v1/getNonce`
 | name | Y | account name |
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -166,7 +166,7 @@ API path：GET `/api/v1/getNonce`
 
 ### HTTP Request
 
-API path：GET `/api/v1/getAccountBalance`
+API Path：GET `/api/v1/getAccountBalance`
 
 > Example:
 
@@ -183,7 +183,7 @@ API path：GET `/api/v1/getAccountBalance`
 | assetId | Y | Asset ID |
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -199,7 +199,7 @@ API path：GET `/api/v1/getAccountBalance`
 
 ### HTTP Request
 
-API path：GET `/api/v1/accountExist`
+API Path：GET `/api/v1/accountExist`
 
 > Example:
 
@@ -215,7 +215,7 @@ API path：GET `/api/v1/accountExist`
 | name | Y | account name |
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -229,7 +229,7 @@ API path：GET `/api/v1/accountExist`
 
 ### HTTP Request
 
-API path：POST `/api/v1/triggerCreatAccount`
+API Path：POST `/api/v1/triggerCreatAccount`
 
 > Example:
 
@@ -260,7 +260,7 @@ API path：POST `/api/v1/triggerCreatAccount`
 | remark | N | remark | 
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -308,7 +308,7 @@ API path：POST `/api/v1/triggerCreatAccount`
 
 ### HTTP Request
 
-API path：POST `/api/v1/accountTransfers`
+API Path：POST `/api/v1/accountTransfers`
 
 > Example:
 
@@ -339,7 +339,7 @@ API path：POST `/api/v1/accountTransfers`
 
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -396,7 +396,7 @@ API path：POST `/api/v1/accountTransfers`
 
 ### HTTP Request
 
-API path：POST `/api/v1/triggerUpdateAccountAuthor`
+API Path：POST `/api/v1/triggerUpdateAccountAuthor`
 
 > Example:
 
@@ -447,7 +447,7 @@ API path：POST `/api/v1/triggerUpdateAccountAuthor`
 | weight | Y | weight |
 | authorActionType | Y | authorAction type 0-add 1-update 2-delete |
 
-> return:
+> Return:
 
 ```json
 {
@@ -539,7 +539,7 @@ API path：POST `/api/v1/triggerUpdateAccountAuthor`
 
 ### HTTP Request
 
-API path：POST `/api/v1/triggerIncrementAsset`
+API Path：POST `/api/v1/triggerIncrementAsset`
 
 > Example:
 
@@ -564,7 +564,7 @@ API path：POST `/api/v1/triggerIncrementAsset`
 | acceptor | Y | Benefit account |
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -610,7 +610,7 @@ API path：POST `/api/v1/triggerIncrementAsset`
 
 ### HTTP Request
 
-API path：POST `/api/v1/triggerIssueAsset`
+API Path：POST `/api/v1/triggerIssueAsset`
 
 > Example:
 
@@ -648,7 +648,7 @@ API path：POST `/api/v1/triggerIssueAsset`
 
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -706,7 +706,7 @@ API path：POST `/api/v1/triggerIssueAsset`
 
 ### HTTP Request
 
-API path：POST `/api/v1/triggerDestroyAsset`
+API Path：POST `/api/v1/triggerDestroyAsset`
 
 > Example:
 
@@ -729,7 +729,7 @@ API path：POST `/api/v1/triggerDestroyAsset`
 | remark | N | remark |
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -769,7 +769,7 @@ API path：POST `/api/v1/triggerDestroyAsset`
 
 ### HTTP Request
 
-API path：GET `/api/v1/getAssetInfoById`
+API Path：GET `/api/v1/getAssetInfoById`
 
 > Example:
 
@@ -785,7 +785,7 @@ API path：GET `/api/v1/getAssetInfoById`
 | assetId | Y | Asset ID |
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -817,7 +817,7 @@ API path：GET `/api/v1/getAssetInfoById`
 
 ### HTTP Request
 
-API path：GET `/api/v1/getAssetInfoByName`
+API Path：GET `/api/v1/getAssetInfoByName`
 
 > Example:
 
@@ -833,7 +833,7 @@ API path：GET `/api/v1/getAssetInfoByName`
 | assetName | Y | Full name of assets |
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -864,7 +864,7 @@ API path：GET `/api/v1/getAssetInfoByName`
 
 ### HTTP Request
 
-API path：POST `/api/v1/triggerUpdateContract`
+API Path：POST `/api/v1/triggerUpdateContract`
 
 > Example:
 
@@ -887,7 +887,7 @@ API path：POST `/api/v1/triggerUpdateContract`
 | contract | Y | Asset Agreement |
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -935,7 +935,7 @@ API path：POST `/api/v1/triggerUpdateContract`
 
 ### HTTP Request
 
-API path：POST `/api/v1/triggerTransfer`
+API Path：POST `/api/v1/triggerTransfer`
 
 > Example:
 
@@ -960,7 +960,7 @@ API path：POST `/api/v1/triggerTransfer`
 | toAccountName | Y | Transfer destination account |
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -1003,7 +1003,7 @@ API path：POST `/api/v1/triggerTransfer`
 
 ### HTTP Request
 
-API path：GET `/api/v1/getTransactionInfoByHash`
+API Path：GET `/api/v1/getTransactionInfoByHash`
 
 > Example:
 
@@ -1019,7 +1019,7 @@ API path：GET `/api/v1/getTransactionInfoByHash`
 | hash | Y | Transaction hash |
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -1106,7 +1106,7 @@ API path：GET `/api/v1/getTransactionInfoByHash`
 
 ### HTTP Request
 
-API path：GET `/api/v1/getTransactionReceipt`
+API Path：GET `/api/v1/getTransactionReceipt`
 
 > Example:
 
@@ -1122,7 +1122,7 @@ API path：GET `/api/v1/getTransactionReceipt`
 | hash | Y | Transaction hash |
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -1209,7 +1209,7 @@ API path：GET `/api/v1/getTransactionReceipt`
 ## View contract results
 ### HTTP Request
 
-API path：POST `/api/v1/getContractResult`
+API Path：POST `/api/v1/getContractResult`
 
 > Example:
 
@@ -1234,7 +1234,7 @@ API path：POST `/api/v1/getContractResult`
 | parameters | N | parameters |
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -1261,7 +1261,7 @@ API path：POST `/api/v1/getContractResult`
 
 ### HTTP Request
 
-API path：GET `/api/v1/getContract`
+API Path：GET `/api/v1/getContract`
 
 > Example:
 
@@ -1277,7 +1277,7 @@ API path：GET `/api/v1/getContract`
 | name | Y | Contract name |
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -1317,7 +1317,7 @@ API path：GET `/api/v1/getContract`
 
 ### HTTP Request
 
-API path：POST `/api/v1/triggerSmartContract`
+API Path：POST `/api/v1/triggerSmartContract`
 
 > Example:
 
@@ -1349,7 +1349,7 @@ API path：POST `/api/v1/triggerSmartContract`
 
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -1405,7 +1405,7 @@ API path：POST `/api/v1/triggerSmartContract`
 
 ### HTTP Request
 
-API path：POST `/api/v1/triggerCreateContract`
+API Path：POST `/api/v1/triggerCreateContract`
 
 > Example:
 
@@ -1431,7 +1431,7 @@ API path：POST `/api/v1/triggerCreateContract`
 
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -1476,7 +1476,7 @@ API path：POST `/api/v1/triggerCreateContract`
 
 ### HTTP Request
 
-API path：POST `/api/v1/contractTransactions`
+API Path：POST `/api/v1/contractTransactions`
 
 > Example:
 
@@ -1503,7 +1503,7 @@ API path：POST `/api/v1/contractTransactions`
 | searchInternal | N | Query internal transactions | 
 
 
-> return:
+> Return:
 
 ```json
 {
@@ -1553,6 +1553,178 @@ API path：POST `/api/v1/contractTransactions`
 ```
 
 
+## Get Event By Hash
+
+### HTTP Request
+
+API Path：POST `/api/v1/getEventByHash`
+
+> Example:
+
+```json
+
+{
+    "txHash":"0xd7e108835d9aefcc7e04cbc0048c0299685e8e9543e8624e040f5b851aa23801",
+    "abi":"[{\"constant\":false,\"inputs\":[{\"name\":\"name\",\"type\":\"string\"},{\"name\":\"weight\",\"type\":\"uint256\"}],\"name\":\"hasIndex\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"name\":\"name\",\"type\":\"string\"},{\"indexed\":true,\"name\":\"flag\",\"type\":\"bool\"},{\"indexed\":true,\"name\":\"weight\",\"type\":\"uint256\"}],\"name\":\"HasIndex\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"name\",\"type\":\"string\"},{\"indexed\":true,\"name\":\"flag\",\"type\":\"bool\"},{\"indexed\":false,\"name\":\"weight\",\"type\":\"uint256\"}],\"name\":\"TwoEvent\",\"type\":\"event\"}]"
+}
+```
+
+### Request parameter
+| Field Name | Is it necessary | description |
+| --- | ------|-------------|
+| txHash | Y | Transation hash | 
+| abi | Y | Contract abi | 
+
+
+> Return:
+
+```json
+{
+    "data": [
+        {
+            "txHash": "0xd7e108835d9aefcc7e04cbc0048c0299685e8e9543e8624e040f5b851aa23801",
+            "result": {
+                "flag": true,
+                "name": "0x32546a16566d300ff0ee51ca4dc99d92a9a1cc65a1badb8b6aacaa62b4cd71e1",
+                "weight": 300
+            },
+            "resultType": {
+                "flag": "bool",
+                "name": "string",
+                "weight": "uint256"
+            },
+            "blockTime": 1602732885,
+            "height": 109524,
+            "eventName": "HasIndex",
+            "contract": "test8@demo",
+            "eventIndex": 0,
+            "confirmed": true
+        },
+        {
+            "txHash": "0xd7e108835d9aefcc7e04cbc0048c0299685e8e9543e8624e040f5b851aa23801",
+            "result": {
+                "flag": false,
+                "name": "lisi",
+                "weight": 123
+            },
+            "resultType": {
+                "flag": "bool",
+                "name": "string",
+                "weight": "uint256"
+            },
+            "blockTime": 1602732885,
+            "height": 109524,
+            "eventName": "TwoEvent",
+            "contract": "test8@demo",
+            "eventIndex": 1,
+            "confirmed": true
+        }
+    ],
+    "errorCode": 0,
+    "errorMsg": ""
+}
+```
+
+
+## Get Contract Events
+
+### HTTP Request
+
+API Path：POST `/api/v1/contractEvents`
+
+> Example:
+
+```json
+
+{
+    "abi":"[{\"constant\":true,\"inputs\":[{\"name\":\"\",\"type\":\"uint256\"}],\"name\":\"groupList\",\"outputs\":[{\"name\":\"groupId\",\"type\":\"uint256\"},{\"name\":\"groupOwner\",\"type\":\"address\"},{\"name\":\"groupName\",\"type\":\"string\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_groupName\",\"type\":\"string\"},{\"name\":\"_groupOwner\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"addGroup\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_groupName\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"updateGroupName\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_targetId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"jiagong\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"chuku\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_actionName\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"addAction\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_id\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"yunshu\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_groupOwner\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"updateGroupOwner\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_id\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"chulan\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"addUserToGroup\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"user\",\"type\":\"string\"}],\"name\":\"setVerifyUser\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_actionName\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"modifyAction\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_packageId\",\"type\":\"string\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"unpack\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_targetId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"breake\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"xiaoshou\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"}],\"name\":\"queryActionForUser\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"delUserFromGroup\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_id\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"siyang\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_packageId\",\"type\":\"string\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"pack\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"zhijian\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"removeActionForUser\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"ruchang\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":true,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"},{\"name\":\"_groupId\",\"type\":\"uint256\"}],\"name\":\"queryGroupForUser\",\"outputs\":[{\"name\":\"\",\"type\":\"bool\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"create\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_id\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"},{\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"cangchu\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_user\",\"type\":\"string\"},{\"name\":\"_groupId\",\"type\":\"uint256\"},{\"name\":\"_actionId\",\"type\":\"uint256\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"addActionForUser\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"constant\":false,\"inputs\":[{\"name\":\"_productId\",\"type\":\"string\"},{\"name\":\"_remark\",\"type\":\"string\"},{\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"verify\",\"outputs\":[],\"payable\":false,\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_groupName\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_groupOwner\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"AddGroup\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_groupOwner\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"UpdateGroupOwner\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_groupName\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"UpdateGroupName\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_actionId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_name\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"AddAction\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_actionId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_name\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"UpdateAction\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_user\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"AddUserToGroup\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_user\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"DelUserFromGroup\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_user\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_actionId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"AddActionForUser\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_user\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_actionId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"RemoveActionForUser\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_productId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_action\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_remark\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"Create\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_productId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_groupId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_action\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_remark\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"Tag\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_packageId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_productId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_remark\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"Pack\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_packageId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_productId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_remark\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"UnPack\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_productId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_targetId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_remark\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_deviceId\",\"type\":\"uint256\"},{\"indexed\":false,\"name\":\"_process\",\"type\":\"string\"}],\"name\":\"Break\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"name\":\"_productId\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_remark\",\"type\":\"string\"},{\"indexed\":false,\"name\":\"_time\",\"type\":\"string\"}],\"name\":\"Verify\",\"type\":\"event\"}]",
+    "topic":"UnPack(string,string,string,string,uint256,string)",
+    "contractName":"suyuan13@demo",
+    "onlyConfirmed":false,
+    "limit":40,
+    "fingerPrint":"",
+    "orderBy":"height#asc"
+}
+```
+
+### Request parameter
+| Field Name | Is it necessary | description |
+| --- | ------|-------------|
+| abi | Y | Contract abi | 
+| topic | Y | Event topic(contain parameter type) | 
+| contractName | Y | Contract name | 
+| onlyConfirmed | N | Whether it has been confirmed, the default is false | 
+| limit | N  |  Number of queries, 1~40, default 20 | 
+| fingerPrint | N  |  Query the fingerprint of the next batch of data, and pass it blank for the first time | 
+| orderBy | Y | height#asc,height#desc | 
+
+> Return:
+
+```json
+{
+    "data": {
+        "meta": {
+            "limit": 2,
+            "nextFingerPrint": "Gjc2sAOwnNkDRVvHKl6iPA"
+        },
+        "content": [
+            {
+                "txHash": "0x60ff4e651d9c8f8f90d6d14a2a7805e5ad72d3d170d7b0809ee3c44b83cad654",
+                "result": {
+                    "_deviceId": 400,
+                    "_packageId": "B001",
+                    "_process": "销售",
+                    "_productId": "R001,R002,R003,R004,R005,R006",
+                    "_remark": "{\"groupName\":\"销售1\",\"deviceName\":\"赵六的ipad\",\"actionName\":\"拆包\"}",
+                    "_time": "1603267417"
+                },
+                "resultType": {
+                    "_deviceId": "uint256",
+                    "_packageId": "string",
+                    "_process": "string",
+                    "_productId": "string",
+                    "_remark": "string",
+                    "_time": "string"
+                },
+                "blockTime": 1603267419,
+                "height": 287702,
+                "eventName": "UnPack",
+                "contract": "suyuan13@demo",
+                "eventIndex": 0,
+                "confirmed": true
+            },
+            {
+                "txHash": "0x13c261e7f12df00bc9517dbb5fbc1ce4e963fce5d488b88d8917032a0fd52d94",
+                "result": {
+                    "_deviceId": 400,
+                    "_packageId": "B002",
+                    "_process": "销售",
+                    "_productId": "R003001,R003002,R003003",
+                    "_remark": "{\"groupName\":\"销售1\",\"deviceName\":\"赵六的ipad\",\"actionName\":\"拆包\"}",
+                    "_time": "1603279845"
+                },
+                "resultType": {
+                    "_deviceId": "uint256",
+                    "_packageId": "string",
+                    "_process": "string",
+                    "_productId": "string",
+                    "_remark": "string",
+                    "_time": "string"
+                },
+                "blockTime": 1603279848,
+                "height": 291845,
+                "eventName": "UnPack",
+                "contract": "suyuan13@demo",
+                "eventIndex": 0,
+                "confirmed": true
+            }
+        ]
+    },
+    "errorCode": 0,
+    "errorMsg": ""
+}
+```
+
 
 
 # Tool
@@ -1561,7 +1733,7 @@ API path：POST `/api/v1/contractTransactions`
 
 ### HTTP Request
 
-API path：GET `/api/v1/getChainConfig`
+API Path：GET `/api/v1/getChainConfig`
 
 > Example:
 
@@ -1570,7 +1742,7 @@ API path：GET `/api/v1/getChainConfig`
 
 ```
 
-> return:
+> Return:
 
 ```json
 {
@@ -1631,7 +1803,7 @@ API path：GET `/api/v1/getChainConfig`
 
 ### HTTP Request
 
-API path：GET `/api/v1/getGasPrice`
+API Path：GET `/api/v1/getGasPrice`
 
 > Example:
 
@@ -1640,7 +1812,7 @@ API path：GET `/api/v1/getGasPrice`
 
 ```
 
-> return:
+> Return:
 
 ```json
 {
@@ -1656,7 +1828,7 @@ API path：GET `/api/v1/getGasPrice`
 
 ### HTTP Request
 
-API path：POST `/api/v1/broadcast`
+API Path：POST `/api/v1/broadcast`
 
 > Example:
 
@@ -1667,7 +1839,7 @@ API path：POST `/api/v1/broadcast`
 }
 ```
 
-> return:
+> Return:
 
 ```json
 {
@@ -1685,7 +1857,7 @@ API path：POST `/api/v1/broadcast`
 
 ### HTTP Request
 
-API path：POST `/api/v1/sign`
+API Path：POST `/api/v1/sign`
 
 > Example:
 
@@ -1719,7 +1891,7 @@ API path：POST `/api/v1/sign`
 | action | Y | Action content to be signed |
 | privateKey | Y | privateKey |
 
-> return:
+> Return:
 
 ```json
 {
@@ -1733,7 +1905,7 @@ API path：POST `/api/v1/sign`
 
 ### HTTP Request
 
-API path：POST `/api/v1/contractPayloadDecode`
+API Path：POST `/api/v1/contractPayloadDecode`
 
 > Example:
 
@@ -1753,7 +1925,7 @@ API path：POST `/api/v1/contractPayloadDecode`
 
 
 
-> return:
+> Return:
 
 ```json
 {
