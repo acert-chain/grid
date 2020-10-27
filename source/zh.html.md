@@ -1625,7 +1625,7 @@ API路径：POST `/api/v1/getEventByHash`
 ```
 
 
-## 根据交易hash获取事件
+## 获取合约事件
 
 ### HTTP Request
 
