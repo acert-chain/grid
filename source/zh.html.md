@@ -926,6 +926,44 @@ API路径：POST `/api/v1/triggerUpdateContract`
 }
 ```
 
+# 区块
+## 区块详情
+
+### HTTP Request
+
+API路径：GET `api/v1/block`
+
+> 示例:
+
+```bash
+/api/v1/block?height=655443
+
+```
+
+### 请求参数
+
+| 字段名称 | 是否必须 | 描述 |
+| --- | ------|-------------|
+| height | Y | 高度 |
+
+```json
+{
+    "data": {
+        "height": 655443,
+        "latestHeight": 660506,
+        "timestamp": 1604370663,
+        "hash": "0xa504ffd8be3695f743c4301fc5e07c749a6837647c79b4ffac4ba9e15c08ef6e",
+        "producer": "miner1",
+        "version": 1,
+        "gasLimit": 30000000,
+        "gasUsed": "30000000",
+        "feeTotal": "30000000",
+        "stateCount": 0
+    },
+    "errorCode": 0,
+    "errorMsg": ""
+}
+```
 
 # 交易
 
@@ -995,8 +1033,74 @@ API路径：POST `/api/v1/triggerTransfer`
 }
 ```
 
+## 根据高度获取交易
+
+## 查询交易信息
+
+### HTTP Request
+
+API路径：GET `/api/v1/getTransactionsByHeight`
+
+> 示例:
+
+```bash
+/api/v1/getTransactionsByHeight
+
+```
+
+### 请求参数
+
+| 字段名称 | 是否必须 | 描述 |
+| --- | ------|-------------|
+| height | 是 | 高度 |
+| page | 是 | 页码 |
+| pageSize | 是 | 每页大小 |
 
 
+> 返回:
+
+```json
+{
+    "data": {
+        "total": 300,
+        "content": [
+            {
+                "txHash": "0x719bf58da147a34a572c85126edd0311fd34814e24a0609437c35815d5db0375",
+                "feeAssetName": "acgas",
+                "feeAssetSymbol": "acgas",
+                "feeAssetId": 0,
+                "feeTotal": "100000",
+                "gasUsed": "100000",
+                "gasPrice": 0,
+                "state": "success",
+                "actions": [
+                    {
+                        "assetName": "acgas",
+                        "assetSymbol": "acgas",
+                        "assetId": 0,
+                        "actionType": "Transfer",
+                        "from": "c37937",
+                        "to": "owner@acert",
+                        "amount": "1",
+                        "payload": "\"\"",
+                        "method": "",
+                        "params": "",
+                        "remark": "remark",
+                        "state": 1,
+                        "errorMsg": "",
+                        "payer": "owner@acert",
+                        "payerGasPrice": "1",
+                        "parentSigner": "",
+                        "payerParentSigner": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "errorCode": 0,
+    "errorMsg": ""
+}
+```
 
 ## 查询交易信息
 
