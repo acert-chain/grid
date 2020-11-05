@@ -665,12 +665,15 @@
 </blockquote>
 <div class="highlight"><pre class="highlight json tab-json"><code><span class="w">
 </span><span class="p">{</span><span class="w">
-    </span><span class="nl">"accountName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@homes"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"accountName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@demo"</span><span class="p">,</span><span class="w">
     </span><span class="nl">"assetId"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000000000</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"newAccountName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test000003@homes"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"founder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test000003@homes"</span><span class="p">,</span><span class="w">
-    </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"xxx"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"newAccountName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin@demo"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"founder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@demo"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"type"</span><span class="p">:</span><span class="s2">"publickey"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"value"</span><span class="p">:</span><span class="s2">"0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
     </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span><span class="w">
     </span><span class="nl">"remark"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello"</span><span class="w">
 </span><span class="p">}</span><span class="w">
@@ -713,6 +716,16 @@
 <td>所属人</td>
 </tr>
 <tr>
+<td>type</td>
+<td>Y</td>
+<td>类型 publickey address account</td>
+</tr>
+<tr>
+<td>value</td>
+<td>Y</td>
+<td>值</td>
+</tr>
+<tr>
 <td>description</td>
 <td>N</td>
 <td>账户描述</td>
@@ -731,35 +744,41 @@
     </span><span class="nl">"data"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
         </span><span class="nl">"parameter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nl">"requestParameter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="nl">"accountName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@homes"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"accountName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@demo"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"assetId"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"remark"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000000000</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"newAccountName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test000003@homes"</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"founder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test000003@homes"</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"publicKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"newAccountName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin@demo"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"founder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@demo"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"publickey"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd"</span><span class="w">
+                </span><span class="p">},</span><span class="w">
                 </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
             </span><span class="p">},</span><span class="w">
             </span><span class="nl">"payloadParameter"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="nl">"accountName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test000003@homes"</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"founder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"test000003@homes"</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"publicKey"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd"</span><span class="w">
+                </span><span class="nl">"accountName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"admin@demo"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"founder"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@demo"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"author"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                    </span><span class="nl">"owner"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"weight"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+                </span><span class="p">}</span><span class="w">
             </span><span class="p">}</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="nl">"result"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
             </span><span class="nl">"chainId"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
             </span><span class="nl">"gasAssetId"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-            </span><span class="nl">"gasPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">1000</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"gasPrice"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
             </span><span class="nl">"action"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="nl">"accountName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@homes"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"accountName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"@demo"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"actionType"</span><span class="p">:</span><span class="w"> </span><span class="mi">256</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"assetId"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"toAccountName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account@gon"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"toAccountName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"account@acert"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"gasLimit"</span><span class="p">:</span><span class="w"> </span><span class="mi">500000</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"amount"</span><span class="p">:</span><span class="w"> </span><span class="mi">100000000000</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"payload"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xf866907465737430303030303340686f6d6573907465737430303030303340686f6d6573b841047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd80"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"payload"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0xf8598a61646d696e4064656d6f854064656d6ff84501b841047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd0180"</span><span class="p">,</span><span class="w">
                 </span><span class="nl">"remark"</span><span class="p">:</span><span class="w"> </span><span class="s2">"hello"</span><span class="p">,</span><span class="w">
-                </span><span class="nl">"nonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">87</span><span class="w">
+                </span><span class="nl">"nonce"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="w">
             </span><span class="p">}</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">},</span><span class="w">
