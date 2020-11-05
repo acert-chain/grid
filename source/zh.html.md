@@ -241,7 +241,7 @@ API路径：POST `/api/v1/triggerCreatAccount`
     "amount": 100000000000,
     "newAccountName": "test000003@homes",
     "founder": "test000003@homes",
-    "publicKey": "0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd",
+    "owner": "xxx",
     "description": "",
     "remark": "hello"
 }
@@ -255,7 +255,7 @@ API路径：POST `/api/v1/triggerCreatAccount`
 | amount | Y | 创建账户时转账数量 | 
 | newAccountName | Y | 新账户名称 | 
 | founder | Y | founder | 
-| publicKey | Y | 公钥地址 | 
+| owner | Y | 所属人 | 
 | description | N | 账户描述 | 
 | remark | N | 账户备注 | 
 
