@@ -236,12 +236,15 @@ API路径：POST `/api/v1/triggerCreatAccount`
 ```json
 
 {
-    "accountName": "@homes",
+    "accountName": "@demo",
     "assetId": 0,
     "amount": 100000000000,
-    "newAccountName": "test000003@homes",
-    "founder": "test000003@homes",
-    "owner": "xxx",
+    "newAccountName": "admin@demo",
+    "founder": "@demo",
+    "owner": {
+        "type":"publickey",
+        "value":"0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd"
+    },
     "description": "",
     "remark": "hello"
 }
@@ -256,6 +259,8 @@ API路径：POST `/api/v1/triggerCreatAccount`
 | newAccountName | Y | 新账户名称 | 
 | founder | Y | founder | 
 | owner | Y | 所属人 | 
+| type | Y | 类型 publickey address account | 
+| value | Y | 值 | 
 | description | N | 账户描述 | 
 | remark | N | 账户备注 | 
 
@@ -267,35 +272,41 @@ API路径：POST `/api/v1/triggerCreatAccount`
     "data": {
         "parameter": {
             "requestParameter": {
-                "accountName": "@homes",
+                "accountName": "@demo",
                 "assetId": 0,
                 "remark": "hello",
                 "amount": 100000000000,
-                "newAccountName": "test000003@homes",
-                "founder": "test000003@homes",
-                "publicKey": "0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd",
+                "newAccountName": "admin@demo",
+                "founder": "@demo",
+                "owner": {
+                    "type": "publickey",
+                    "value": "0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd"
+                },
                 "description": ""
             },
             "payloadParameter": {
-                "accountName": "test000003@homes",
-                "founder": "test000003@homes",
-                "publicKey": "0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd"
+                "accountName": "admin@demo",
+                "founder": "@demo",
+                "author": {
+                    "owner": "0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd",
+                    "weight": 1
+                }
             }
         },
         "result": {
             "chainId": 1,
             "gasAssetId": 0,
-            "gasPrice": 1000,
+            "gasPrice": 1,
             "action": {
-                "accountName": "@homes",
+                "accountName": "@demo",
                 "actionType": 256,
                 "assetId": 0,
-                "toAccountName": "account@gon",
+                "toAccountName": "account@acert",
                 "gasLimit": 500000,
                 "amount": 100000000000,
-                "payload": "0xf866907465737430303030303340686f6d6573907465737430303030303340686f6d6573b841047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd80",
+                "payload": "0xf8598a61646d696e4064656d6f854064656d6ff84501b841047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd0180",
                 "remark": "hello",
-                "nonce": 87
+                "nonce": 18
             }
         }
     },
