@@ -372,10 +372,7 @@
                     <a href="#e33b73ff9e" class="toc-h2 toc-link" data-title="根据高度获取交易">根据高度获取交易</a>
                   </li>
                   <li>
-                    <a href="#1333ca551f" class="toc-h2 toc-link" data-title="查询交易信息">查询交易信息</a>
-                  </li>
-                  <li>
-                    <a href="#1333ca551f-2" class="toc-h2 toc-link" data-title="查询交易信息">查询交易信息</a>
+                    <a href="#hash" class="toc-h2 toc-link" data-title="根据Hash查询交易信息">根据Hash查询交易信息</a>
                   </li>
                   <li>
                     <a href="#1918af0af5" class="toc-h2 toc-link" data-title="查询交易状态">查询交易状态</a>
@@ -401,7 +398,7 @@
                     <a href="#5b10d45e5c" class="toc-h2 toc-link" data-title="合约调用记录">合约调用记录</a>
                   </li>
                   <li>
-                    <a href="#hash" class="toc-h2 toc-link" data-title="根据交易hash获取事件">根据交易hash获取事件</a>
+                    <a href="#hash-2" class="toc-h2 toc-link" data-title="根据交易hash获取事件">根据交易hash获取事件</a>
                   </li>
                   <li>
                     <a href="#4c74b2b1dd" class="toc-h2 toc-link" data-title="获取合约事件">获取合约事件</a>
@@ -1395,7 +1392,7 @@
 </thead><tbody>
 <tr>
 <td>assetId</td>
-<td>是</td>
+<td>Y</td>
 <td>资产ID</td>
 </tr>
 </tbody></table>
@@ -1442,7 +1439,7 @@
 </thead><tbody>
 <tr>
 <td>assetName</td>
-<td>是</td>
+<td>Y</td>
 <td>资产名称</td>
 </tr>
 </tbody></table>
@@ -1672,7 +1669,7 @@
     </span><span class="nl">"errorCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="nl">"errorMsg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h2 id='e33b73ff9e'>根据高度获取交易</h2><h2 id='1333ca551f'>查询交易信息</h2><h3 id='http-request-16'>HTTP Request</h3>
+</span></code></pre></div><h2 id='e33b73ff9e'>根据高度获取交易</h2><h3 id='http-request-16'>HTTP Request</h3>
 <p>API路径：GET <code>/api/v1/getTransactionsByHeight</code></p>
 
 <blockquote>
@@ -1690,17 +1687,17 @@
 </thead><tbody>
 <tr>
 <td>height</td>
-<td>是</td>
+<td>Y</td>
 <td>高度</td>
 </tr>
 <tr>
 <td>page</td>
-<td>是</td>
+<td>Y</td>
 <td>页码</td>
 </tr>
 <tr>
 <td>pageSize</td>
-<td>是</td>
+<td>Y</td>
 <td>每页大小</td>
 </tr>
 </tbody></table>
@@ -1748,7 +1745,7 @@
     </span><span class="nl">"errorCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="nl">"errorMsg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h2 id='1333ca551f-2'>查询交易信息</h2><h3 id='http-request-17'>HTTP Request</h3>
+</span></code></pre></div><h2 id='hash'>根据Hash查询交易信息</h2><h3 id='http-request-17'>HTTP Request</h3>
 <p>API路径：GET <code>/api/v1/getTransactionInfoByHash</code></p>
 
 <blockquote>
@@ -1766,7 +1763,7 @@
 </thead><tbody>
 <tr>
 <td>hash</td>
-<td>是</td>
+<td>Y</td>
 <td>交易hash</td>
 </tr>
 </tbody></table>
@@ -1870,7 +1867,7 @@
 </thead><tbody>
 <tr>
 <td>hash</td>
-<td>是</td>
+<td>Y</td>
 <td>交易hash</td>
 </tr>
 </tbody></table>
@@ -2039,7 +2036,7 @@
 </thead><tbody>
 <tr>
 <td>name</td>
-<td>是</td>
+<td>Y</td>
 <td>合约名称</td>
 </tr>
 </tbody></table>
@@ -2307,7 +2304,7 @@
 </thead><tbody>
 <tr>
 <td>contractName</td>
-<td>是</td>
+<td>Y</td>
 <td>合约名称</td>
 </tr>
 <tr>
@@ -2317,22 +2314,22 @@
 </tr>
 <tr>
 <td>limit</td>
-<td>否</td>
+<td>N</td>
 <td>查询数量，1~40,默认20</td>
 </tr>
 <tr>
 <td>fingerPrint</td>
-<td>否</td>
+<td>N</td>
 <td>查询下一批数据的指纹，首次传空</td>
 </tr>
 <tr>
 <td>orderBy</td>
-<td>是</td>
+<td>Y</td>
 <td>height#asc,height#desc</td>
 </tr>
 <tr>
 <td>searchInternal</td>
-<td>否</td>
+<td>N</td>
 <td>查询内部交易</td>
 </tr>
 </tbody></table>
@@ -2384,7 +2381,7 @@
     </span><span class="nl">"errorCode"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
     </span><span class="nl">"errorMsg"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre></div><h2 id='hash'>根据交易hash获取事件</h2><h3 id='http-request-24'>HTTP Request</h3>
+</span></code></pre></div><h2 id='hash-2'>根据交易hash获取事件</h2><h3 id='http-request-24'>HTTP Request</h3>
 <p>API路径：POST <code>/api/v1/getEventByHash</code></p>
 
 <blockquote>
@@ -2405,12 +2402,12 @@
 </thead><tbody>
 <tr>
 <td>txHash</td>
-<td>是</td>
+<td>Y</td>
 <td>交易hash</td>
 </tr>
 <tr>
 <td>abi</td>
-<td>是</td>
+<td>Y</td>
 <td>合约abi</td>
 </tr>
 </tbody></table>
@@ -2488,37 +2485,37 @@
 </thead><tbody>
 <tr>
 <td>abi</td>
-<td>是</td>
+<td>Y</td>
 <td>合约abi</td>
 </tr>
 <tr>
 <td>topic</td>
-<td>是</td>
+<td>Y</td>
 <td>事件主题(含参数类型)</td>
 </tr>
 <tr>
 <td>contractName</td>
-<td>是</td>
+<td>Y</td>
 <td>合约名称</td>
 </tr>
 <tr>
 <td>onlyConfirmed</td>
-<td>否</td>
+<td>N</td>
 <td>是否已确认，默认false</td>
 </tr>
 <tr>
 <td>limit</td>
-<td>否</td>
+<td>N</td>
 <td>查询数量，1~40,默认20</td>
 </tr>
 <tr>
 <td>fingerPrint</td>
-<td>否</td>
+<td>N</td>
 <td>查询下一批数据的指纹，首次传空</td>
 </tr>
 <tr>
 <td>orderBy</td>
-<td>是</td>
+<td>Y</td>
 <td>height#asc,height#desc</td>
 </tr>
 </tbody></table>
