@@ -236,26 +236,31 @@ API Path：POST `/api/v1/triggerCreatAccount`
 ```json
 
 {
-    "accountName": "@homes",
+    "accountName": "@demo",
     "assetId": 0,
     "amount": 100000000000,
-    "newAccountName": "test000003@homes",
-    "founder": "test000003@homes",
-    "publicKey": "0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd",
+    "newAccountName": "admin@demo",
+    "founder": "@demo",
+    "owner": {
+        "type":"publickey",
+        "value":"0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd"
+    },
     "description": "",
     "remark": "hello"
 }
 ```
 
-### Request parameter
+### 请求参数
 | Field Name | Is it necessary | description |
 | --- | ------|-------------|
 | accountName | Y | account name | 
-| assetId | Y | Asset ID | 
-| amount | Y | Number of transfers when creating an account | 
-| newAccountName | Y | New account name | 
+| assetId | Y | asset id | 
+| amount | Y | transfer amount | 
+| newAccountName | Y | new account name | 
 | founder | Y | founder | 
-| publicKey | Y | publicKey | 
+| owner | Y | owner | 
+| type | Y | type :publickey address account | 
+| value | Y | value | 
 | description | N | description | 
 | remark | N | remark | 
 
@@ -267,35 +272,41 @@ API Path：POST `/api/v1/triggerCreatAccount`
     "data": {
         "parameter": {
             "requestParameter": {
-                "accountName": "@homes",
+                "accountName": "@demo",
                 "assetId": 0,
                 "remark": "hello",
                 "amount": 100000000000,
-                "newAccountName": "test000003@homes",
-                "founder": "test000003@homes",
-                "publicKey": "0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd",
+                "newAccountName": "admin@demo",
+                "founder": "@demo",
+                "owner": {
+                    "type": "publickey",
+                    "value": "0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd"
+                },
                 "description": ""
             },
             "payloadParameter": {
-                "accountName": "test000003@homes",
-                "founder": "test000003@homes",
-                "publicKey": "0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd"
+                "accountName": "admin@demo",
+                "founder": "@demo",
+                "author": {
+                    "owner": "0x047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd",
+                    "weight": 1
+                }
             }
         },
         "result": {
             "chainId": 1,
             "gasAssetId": 0,
-            "gasPrice": 1000,
+            "gasPrice": 1,
             "action": {
-                "accountName": "@homes",
+                "accountName": "@demo",
                 "actionType": 256,
                 "assetId": 0,
-                "toAccountName": "account@gon",
+                "toAccountName": "account@acert",
                 "gasLimit": 500000,
                 "amount": 100000000000,
-                "payload": "0xf866907465737430303030303340686f6d6573907465737430303030303340686f6d6573b841047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd80",
+                "payload": "0xf8598a61646d696e4064656d6f854064656d6ff84501b841047db227d7094ce215c3a0f57e1bcc732551fe351f94249471934567e0f5dc1bf795962b8cccb87a2eb56b29fbe37d614e2f4c3c45b789ae4f1f51f4cb21972ffd0180",
                 "remark": "hello",
-                "nonce": 87
+                "nonce": 18
             }
         }
     },
@@ -926,6 +937,43 @@ API Path：POST `/api/v1/triggerUpdateContract`
 }
 ```
 
+# Block
+## Block Detail
+
+### HTTP Request
+
+API Path：GET `api/v1/block`
+
+> Example:
+
+```bash
+/api/v1/block?height=655443
+
+```
+
+### Request parameter
+| Field Name | Is it necessary | description |
+| --- | ------|-------------|
+| height | Y | height |
+
+```json
+{
+    "data": {
+        "height": 655443,
+        "latestHeight": 660506,
+        "timestamp": 1604370663,
+        "hash": "0xa504ffd8be3695f743c4301fc5e07c749a6837647c79b4ffac4ba9e15c08ef6e",
+        "producer": "miner1",
+        "version": 1,
+        "gasLimit": 30000000,
+        "gasUsed": "30000000",
+        "feeTotal": "30000000",
+        "stateCount": 0
+    },
+    "errorCode": 0,
+    "errorMsg": ""
+}
+```
 
 # Transaction
 
@@ -996,10 +1044,75 @@ API Path：POST `/api/v1/triggerTransfer`
 }
 ```
 
+##  Query transaction information By Height
+
+### HTTP Request
+
+API Path：GET `/api/v1/getTransactionsByHeight`
+
+> Example:
+
+```bash
+/api/v1/getTransactionsByHeight
+
+```
+
+### Request parameter
+
+| Field Name | Is it necessary | description |
+| --- | ------|-------------|
+| height | Y | height |
+| page | Y | page |
+| pageSize | Y | pageSize |
 
 
+> 返回:
 
-## Query transaction information
+```json
+{
+    "data": {
+        "total": 300,
+        "content": [
+            {
+                "txHash": "0x719bf58da147a34a572c85126edd0311fd34814e24a0609437c35815d5db0375",
+                "feeAssetName": "acgas",
+                "feeAssetSymbol": "acgas",
+                "feeAssetId": 0,
+                "feeTotal": "100000",
+                "gasUsed": "100000",
+                "gasPrice": 0,
+                "state": "success",
+                "actions": [
+                    {
+                        "assetName": "acgas",
+                        "assetSymbol": "acgas",
+                        "assetId": 0,
+                        "actionType": "Transfer",
+                        "from": "c37937",
+                        "to": "owner@acert",
+                        "amount": "1",
+                        "payload": "\"\"",
+                        "method": "",
+                        "params": "",
+                        "remark": "remark",
+                        "state": 1,
+                        "errorMsg": "",
+                        "payer": "owner@acert",
+                        "payerGasPrice": "1",
+                        "parentSigner": "",
+                        "payerParentSigner": ""
+                    }
+                ]
+            }
+        ]
+    },
+    "errorCode": 0,
+    "errorMsg": ""
+}
+```
+
+
+## Query transaction information By Hash
 
 ### HTTP Request
 

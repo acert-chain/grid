@@ -793,7 +793,7 @@ API路径：GET `/api/v1/getAssetInfoById`
 
 | 字段名称 | 是否必须 | 描述 |
 | --- | ------|-------------|
-| assetId | 是 | 资产ID |
+| assetId | Y | 资产ID |
 
 
 > 返回:
@@ -841,7 +841,7 @@ API路径：GET `/api/v1/getAssetInfoByName`
 
 | 字段名称 | 是否必须 | 描述 |
 | --- | ------|-------------|
-| assetName | 是 | 资产名称 |
+| assetName | Y | 资产名称 |
 
 
 > 返回:
@@ -1046,8 +1046,6 @@ API路径：POST `/api/v1/triggerTransfer`
 
 ## 根据高度获取交易
 
-## 查询交易信息
-
 ### HTTP Request
 
 API路径：GET `/api/v1/getTransactionsByHeight`
@@ -1063,9 +1061,9 @@ API路径：GET `/api/v1/getTransactionsByHeight`
 
 | 字段名称 | 是否必须 | 描述 |
 | --- | ------|-------------|
-| height | 是 | 高度 |
-| page | 是 | 页码 |
-| pageSize | 是 | 每页大小 |
+| height | Y | 高度 |
+| page | Y | 页码 |
+| pageSize | Y | 每页大小 |
 
 
 > 返回:
@@ -1113,7 +1111,7 @@ API路径：GET `/api/v1/getTransactionsByHeight`
 }
 ```
 
-## 查询交易信息
+## 根据Hash查询交易信息
 
 ### HTTP Request
 
@@ -1130,7 +1128,7 @@ API路径：GET `/api/v1/getTransactionInfoByHash`
 
 | 字段名称 | 是否必须 | 描述 |
 | --- | ------|-------------|
-| hash | 是 | 交易hash |
+| hash | Y | 交易hash |
 
 
 > 返回:
@@ -1233,7 +1231,7 @@ API路径：GET `/api/v1/getTransactionReceipt`
 
 | 字段名称 | 是否必须 | 描述 |
 | --- | ------|-------------|
-| hash | 是 | 交易hash |
+| hash | Y | 交易hash |
 
 
 > 返回:
@@ -1388,7 +1386,7 @@ API路径：GET `/api/v1/getContract`
 
 | 字段名称 | 是否必须 | 描述 |
 | --- | ------|-------------|
-| name | 是 | 合约名称 |
+| name | Y | 合约名称 |
 
 
 > 返回:
@@ -1609,12 +1607,12 @@ API路径：POST `/api/v1/contractTransactions`
 ### 请求参数
 | 字段名称 | 是否必须 | 描述 |
 | --- | ------|-------------|
-| contractName | 是 | 合约名称 | 
+| contractName | Y | 合约名称 | 
 | onlyConfirmed否 | 是否已确认，默认false | 
-| limit | 否  |  查询数量，1~40,默认20 | 
-| fingerPrint | 否  |  查询下一批数据的指纹，首次传空 | 
-| orderBy | 是 | height#asc,height#desc | 
-| searchInternal | 否 | 查询内部交易 | 
+| limit | N  |  查询数量，1~40,默认20 | 
+| fingerPrint | N  |  查询下一批数据的指纹，首次传空 | 
+| orderBy | Y | height#asc,height#desc | 
+| searchInternal | N | 查询内部交易 | 
 
 
 > 返回:
@@ -1686,8 +1684,8 @@ API路径：POST `/api/v1/getEventByHash`
 ### 请求参数
 | 字段名称 | 是否必须 | 描述 |
 | --- | ------|-------------|
-| txHash | 是 | 交易hash | 
-| abi | 是 | 合约abi | 
+| txHash | Y | 交易hash | 
+| abi | Y | 合约abi | 
 
 
 > 返回:
@@ -1764,13 +1762,13 @@ API路径：POST `/api/v1/contractEvents`
 ### 请求参数
 | 字段名称 | 是否必须 | 描述 |
 | --- | ------|-------------|
-| abi | 是 | 合约abi | 
-| topic | 是 | 事件主题(含参数类型) | 
-| contractName | 是 | 合约名称 | 
-| onlyConfirmed | 否 | 是否已确认，默认false | 
-| limit | 否  |  查询数量，1~40,默认20 | 
-| fingerPrint | 否  |  查询下一批数据的指纹，首次传空 | 
-| orderBy | 是 | height#asc,height#desc | 
+| abi | Y | 合约abi | 
+| topic | Y | 事件主题(含参数类型) | 
+| contractName | Y | 合约名称 | 
+| onlyConfirmed | N | 是否已确认，默认false | 
+| limit | N  |  查询数量，1~40,默认20 | 
+| fingerPrint | N  |  查询下一批数据的指纹，首次传空 | 
+| orderBy | Y | height#asc,height#desc | 
 
 
 > 返回:
