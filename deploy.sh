@@ -213,9 +213,9 @@ filter() {
   sed -e "s|$repo|\$repo|g"
 }
 
-sanitize() {
-  "$@" 2> >(filter 1>&2) | filter
-}
+# sanitize() {
+#   "$@" 2> >(filter 1>&2) | filter
+# }
 
 parse_args "$@"
 
