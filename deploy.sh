@@ -214,7 +214,7 @@ filter() {
 }
 
 sanitize() {
-  "$@" 2> >(filter 1>&2) | filter
+  "$@" 2> (filter 1>&2) | filter
 }
 
 parse_args "$@"
